@@ -7,8 +7,7 @@ namespace Ball
     {
         [SerializeField] private BallBounce _bounce;
         [SerializeField] private BallParticles _particles;
-        [SerializeField] private Transform _ball;
-
+        [SerializeField] private BallDestroyer _destroyer;
 
         private bool _collided;
 
@@ -16,7 +15,7 @@ namespace Ball
         {
             if (other.gameObject.TryGetComponent(out PlatformObstacle _))
             {
-                Destroy();
+                _destroyer.Destroy();
                 return;
             }
 
@@ -31,13 +30,6 @@ namespace Ball
         private void OnCollisionExit(Collision collision)
         {
             _collided = false;
-        }
-        private void Destroy()
-        {
-            //effects
-            _particles.EmitDestoryParticles(_ball.position);
-
-            Destroy(gameObject);
         }
     }
 }
