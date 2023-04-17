@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8246587865385773446}
   - component: {fileID: 7301850395469630945}
   - component: {fileID: 7509912677465955846}
+  - component: {fileID: 6264978184028607}
   m_Layer: 0
   m_Name: 1SegmentPlatformsObstacles
   m_TagString: Untagged
@@ -362,3 +363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5b1e72be13f1b4bbe1fa7ff65e23d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!33 &6264978184028607
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075029130344655054}
+  m_Mesh: {fileID: 0}
