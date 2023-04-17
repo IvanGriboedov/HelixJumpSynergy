@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Extensions
 {
@@ -8,6 +9,14 @@ namespace Extensions
         {
             int randomIndex = UnityEngine.Random.Range(0, list.Count);
             return list[randomIndex];
+        }
+    }
+    public static class TransformExtensions
+    {
+
+        public static void ClearParent(this Transform transform)
+        {
+            transform.SetParent(null);
         }
     }
 }
