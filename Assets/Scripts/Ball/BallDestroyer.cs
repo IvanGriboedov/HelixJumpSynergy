@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 
 namespace Ball
@@ -10,11 +9,10 @@ namespace Ball
         [SerializeField] private BallParticles _particles;
         [SerializeField] private CinemachineImpulseSource _impulseSource;
 
-
         public void Destroy()
         {
             //effects
-            _particles.EmitDestoryParticles(_ball.position);
+            _particles.EmitDestroyParticles(_ball.position);
             _impulseSource.GenerateImpulse();
             Destroy(_ball.gameObject);
         }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using Platforms;
 namespace Ball
 {
@@ -18,7 +17,6 @@ namespace Ball
                 _destroyer.Destroy();
                 return;
             }
-
             if (_collided)
                 return;
 

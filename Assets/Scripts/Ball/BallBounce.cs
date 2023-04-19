@@ -1,6 +1,5 @@
 ﻿using Physics;
 using Structures;
-using System.Collections;
 using UnityEngine;
 
 namespace Ball
@@ -12,10 +11,7 @@ namespace Ball
         [SerializeField] private Transform _mesh;
 
         [Header("Settings")]
-
-        [SerializeField] private BounceData _bounceData;
-        [SerializeField] private Vector3Curves _scaleCurves;
-
+        [SerializeField] private BounceData _bounceData; [SerializeField] private Vector3Curves _scaleCurves;
 
         private Bounce _bounce;
         private BounceEffects _bounceEffects;
@@ -32,7 +28,7 @@ namespace Ball
             _bounce.ClampHeight();
             _bounceEffects.ApplyUpwardsScaleTo(_mesh, _meshInitialScale);
         }
-        public void BounceOff(Vector3 direction) => _bounce.BounceOff(direction);
-
+        public void BounceOff(Vector3 direction) =>
+            _bounce.BounceOff(direction);
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ball
@@ -29,7 +27,7 @@ namespace Ball
             Vector3 collisionPosition = other.contacts[0].point + Vector3.up * SurfaceYOffset;
             Instantiate(_spotParticlesPrefab, collisionPosition, Quaternion.identity, other.transform);
         }
-        public void EmitDestoryParticles(Vector3 position) =>
+        public void EmitDestroyParticles(Vector3 position) =>
             Instantiate(_destroyParticlesPrefab, position, Quaternion.identity);
     }
 
